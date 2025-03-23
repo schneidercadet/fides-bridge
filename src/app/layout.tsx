@@ -17,6 +17,27 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Fides Bridge",
   description: "The best jobsite for your future",
+  icons: {
+    icon: '/favicon.ico',
+  },
+  openGraph: {
+    title: "Fides Bridge",
+    description: "The best jobsite for your future",
+    images: [
+      {
+        url: '/images/preview.png',
+        width: 1200,
+        height: 630,
+        alt: 'Fides Bridge Preview',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Fides Bridge",
+    description: "The best jobsite for your future",
+    images: ['/images/preview.png'],
+  },
 };
 
 export default function RootLayout({
