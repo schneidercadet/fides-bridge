@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { SubscribeInput } from "@/Components/ui/subscribe-input";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { SubscribeButton } from "@/Components/ui/subscribe-button";
 import { ArrowRight, Facebook, Youtube, Dribbble, Instagram, Linkedin, Mail } from "lucide-react";
 

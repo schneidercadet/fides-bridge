@@ -6,8 +6,8 @@ import Link from "next/link";
 import { Download, FileText, Award, BarChart, BookOpen, CheckCircle, ChevronRight, Clock } from "lucide-react";
 import Navbar from "@/Components/Navbar";
 import FooterSection from "@/Components/FooterSection";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/Components/ui/button";
+import { Input } from "@/Components/ui/input";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/Components/ui/tabs";
 import { GradientBorderButton } from "@/Components/ui/gradient-border-button";
 

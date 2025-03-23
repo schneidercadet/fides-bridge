@@ -2,16 +2,16 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/Components/ui/button";
+import { Input } from "@/Components/ui/input";
 import { 
   Sheet, 
   SheetContent, 
   SheetHeader, 
   SheetTitle, 
   SheetTrigger 
-} from "@/components/ui/sheet";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+} from "@/Components/ui/sheet";
+import { Avatar, AvatarFallback, AvatarImage } from "@/Components/ui/avatar";
 import { MessageCircle, Send, X, Volume2, VolumeX, RefreshCw } from "lucide-react";
 import Lottie from "lottie-react";
 

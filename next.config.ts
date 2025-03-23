@@ -12,6 +12,17 @@ const nextConfig: NextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true,
   },
+  webpack: (config, { dev, isServer }) => {
+    // Make case insensitive resolution for modules
+    if (!dev && !isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@/components': '@/Components',
+      };
+    }
+    
+    return config;
+  },
 };
 
 export default nextConfig;
