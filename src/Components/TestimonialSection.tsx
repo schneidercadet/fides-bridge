@@ -11,7 +11,6 @@ interface TestimonialCardProps {
   delay?: number;
 }
 
-// Reusable testimonial card
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ 
   name, 
   role, 
@@ -119,9 +118,6 @@ const TestimonialSection = () => {
       // Create a truly infinite carousel by detecting when to reset
       const handleScroll = () => {
         const { scrollLeft, scrollWidth, clientWidth } = scrollElement;
-        
-        // When we've scrolled 1/4 of the way through the duplicated content,
-        // reset back to the first 1/4 position to create a seamless loop
         const resetPoint = scrollWidth / 2;
         
         if (scrollLeft >= resetPoint) {
@@ -129,6 +125,8 @@ const TestimonialSection = () => {
           scrollElement.style.scrollBehavior = 'auto';
           // Jump back to the start of the duplicated section
           scrollElement.scrollLeft = scrollLeft - resetPoint;
+          // Make sure scrollPos is also reset to match the new position
+          scrollPos = scrollLeft - resetPoint;
           // Re-enable smooth scrolling
           setTimeout(() => {
             scrollElement.style.scrollBehavior = 'smooth';
@@ -152,7 +150,7 @@ const TestimonialSection = () => {
       scrollElement.addEventListener('scroll', handleScroll);
       
       // Set up the automatic scrolling
-      const animationInterval = setInterval(scrollAnimation, 20);
+      const animationInterval = setInterval(scrollAnimation, 10);
       
       return () => {
         clearInterval(animationInterval);
@@ -161,8 +159,6 @@ const TestimonialSection = () => {
     }
   }, []);
 
-  // Create a continuous loop of cards by tripling the testimonials
-  // This ensures smooth infinite scrolling with no visible reset
   const displayTestimonials = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
 
   return (
